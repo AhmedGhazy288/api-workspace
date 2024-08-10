@@ -1,0 +1,1091 @@
+{
+	"info": {
+		"_postman_id": "1851b415-5610-42a5-a42e-05c3ad0e94f1",
+		"name": "WORK SPACE",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19728792"
+	},
+	"item": [
+		{
+			"name": "Admin",
+			"item": [
+				{
+					"name": "Auth",
+					"item": [
+						{
+							"name": "Login",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\":\"admin\",\r\n    \"password\":\"124578963\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASEURL}}/login",
+									"host": [
+										"{{BASEURL}}"
+									],
+									"path": [
+										"login"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"auth": {
+						"type": "bearer",
+						"bearer": [
+							{
+								"key": "token",
+								"value": "4|lsg7SkLPW8p9Z9OdfUO36VpfuSrYgegCYgcY7ojX",
+								"type": "string"
+							}
+						]
+					},
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						}
+					]
+				},
+				{
+					"name": "User",
+					"item": [
+						{
+							"name": "index",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true,
+								"disabledSystemHeaders": {
+									"accept": true
+								}
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\":\"user\",\r\n    \"username\":\"-er\",\r\n    \"photo\":\"img.png\",\r\n    \"password\":\"124578963\",\r\n    \"confirm_password\":\"124578963\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASEURL}}/admin/user",
+									"host": [
+										"{{BASEURL}}"
+									],
+									"path": [
+										"admin",
+										"user"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Show",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true,
+								"disabledSystemHeaders": {
+									"accept": true
+								}
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\":\"user\",\r\n    \"username\":\"-er\",\r\n    \"photo\":\"img.png\",\r\n    \"password\":\"124578963\",\r\n    \"confirm_password\":\"124578963\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASEURL}}/admin/user/1",
+									"host": [
+										"{{BASEURL}}"
+									],
+									"path": [
+										"admin",
+										"user",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "new-user",
+											"type": "text"
+										},
+										{
+											"key": "username",
+											"value": "new-u",
+											"type": "text"
+										},
+										{
+											"key": "photo",
+											"type": "file",
+											"src": "/C:/Users/SanDBaG/Desktop/projects-thumbnail/kittton landing.png"
+										},
+										{
+											"key": "password",
+											"value": "124578963",
+											"type": "text"
+										},
+										{
+											"key": "confirm_password",
+											"value": "124578963",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{BASEURL}}/admin/user",
+									"host": [
+										"{{BASEURL}}"
+									],
+									"path": [
+										"admin",
+										"user"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update",
+							"protocolProfileBehavior": {
+								"disabledSystemHeaders": {
+									"accept": true
+								}
+							},
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "elpop",
+											"type": "text"
+										},
+										{
+											"key": "username",
+											"value": "elpop",
+											"type": "text"
+										},
+										{
+											"key": "photo",
+											"type": "file",
+											"src": "/C:/Users/SanDBaG/Desktop/projects-thumbnail/menu-landing-min.png"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{BASEURL}}/admin/user/3",
+									"host": [
+										"{{BASEURL}}"
+									],
+									"path": [
+										"admin",
+										"user",
+										"3"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASEURL}}/admin/user/4",
+									"host": [
+										"{{BASEURL}}"
+									],
+									"path": [
+										"admin",
+										"user",
+										"4"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"auth": {
+						"type": "bearer",
+						"bearer": [
+							{
+								"key": "token",
+								"value": "1|lCLpZRssJfIyH6o8dZcSEvf28HiI6786xMhOyAvd",
+								"type": "string"
+							}
+						]
+					},
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						}
+					]
+				},
+				{
+					"name": "Supplier",
+					"item": [
+						{
+							"name": "Show",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\":\"user\",\r\n    \"username\":\"-er\",\r\n    \"photo\":\"img.png\",\r\n    \"password\":\"124578963\",\r\n    \"confirm_password\":\"124578963\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASEURL}}/admin/supplier/1",
+									"host": [
+										"{{BASEURL}}"
+									],
+									"path": [
+										"admin",
+										"supplier",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Index",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\":\"user\",\r\n    \"username\":\"-er\",\r\n    \"photo\":\"img.png\",\r\n    \"password\":\"124578963\",\r\n    \"confirm_password\":\"124578963\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASEURL}}/admin/supplier",
+									"host": [
+										"{{BASEURL}}"
+									],
+									"path": [
+										"admin",
+										"supplier"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create",
+							"protocolProfileBehavior": {
+								"disabledSystemHeaders": {
+									"accept": true
+								}
+							},
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "company",
+											"value": "icon",
+											"type": "text"
+										},
+										{
+											"key": "phone",
+											"value": "01066135740",
+											"type": "text"
+										},
+										{
+											"key": "photo",
+											"type": "file",
+											"src": "/C:/Users/SanDBaG/Desktop/projects-thumbnail/menu-landing-min.png"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{BASEURL}}/admin/supplier",
+									"host": [
+										"{{BASEURL}}"
+									],
+									"path": [
+										"admin",
+										"supplier"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "company",
+											"value": "not Icon",
+											"type": "text"
+										},
+										{
+											"key": "phone",
+											"value": "011321354635",
+											"type": "text"
+										},
+										{
+											"key": "photo",
+											"type": "file",
+											"src": "/C:/Users/SanDBaG/Desktop/projects-thumbnail/site-landing.png"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{BASEURL}}/admin/supplier/1",
+									"host": [
+										"{{BASEURL}}"
+									],
+									"path": [
+										"admin",
+										"supplier",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\":\"user\",\r\n    \"username\":\"adad\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASEURL}}/admin/supplier/1",
+									"host": [
+										"{{BASEURL}}"
+									],
+									"path": [
+										"admin",
+										"supplier",
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"auth": {
+						"type": "bearer",
+						"bearer": [
+							{
+								"key": "token",
+								"value": "1|lCLpZRssJfIyH6o8dZcSEvf28HiI6786xMhOyAvd",
+								"type": "string"
+							}
+						]
+					},
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Auth",
+					"item": [
+						{
+							"name": "Login",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\":\"n-admin\",\r\n    \"password\":\"124578963\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASEURL}}/login",
+									"host": [
+										"{{BASEURL}}"
+									],
+									"path": [
+										"login"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"auth": {
+						"type": "bearer",
+						"bearer": [
+							{
+								"key": "token",
+								"value": "4|lsg7SkLPW8p9Z9OdfUO36VpfuSrYgegCYgcY7ojX",
+								"type": "string"
+							}
+						]
+					},
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						}
+					]
+				},
+				{
+					"name": "User",
+					"item": [
+						{
+							"name": "Show",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true,
+								"disabledSystemHeaders": {
+									"accept": true
+								}
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\":\"user\",\r\n    \"username\":\"-er\",\r\n    \"photo\":\"img.png\",\r\n    \"password\":\"124578963\",\r\n    \"confirm_password\":\"124578963\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASEURL}}/admin/user/1",
+									"host": [
+										"{{BASEURL}}"
+									],
+									"path": [
+										"admin",
+										"user",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Index",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true,
+								"disabledSystemHeaders": {
+									"accept": true
+								}
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\":\"user\",\r\n    \"username\":\"-er\",\r\n    \"photo\":\"img.png\",\r\n    \"password\":\"124578963\",\r\n    \"confirm_password\":\"124578963\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASEURL}}/admin/user",
+									"host": [
+										"{{BASEURL}}"
+									],
+									"path": [
+										"admin",
+										"user"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Index Copy",
+							"request": {
+								"method": "GET",
+								"header": []
+							},
+							"response": []
+						},
+						{
+							"name": "Create",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "new-user",
+											"type": "text"
+										},
+										{
+											"key": "username",
+											"value": "new-u",
+											"type": "text"
+										},
+										{
+											"key": "photo",
+											"type": "file",
+											"src": "/C:/Users/SanDBaG/Desktop/projects-thumbnail/kittton landing.png"
+										},
+										{
+											"key": "password",
+											"value": "124578963",
+											"type": "text"
+										},
+										{
+											"key": "confirm_password",
+											"value": "124578963",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{BASEURL}}/admin/user",
+									"host": [
+										"{{BASEURL}}"
+									],
+									"path": [
+										"admin",
+										"user"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update",
+							"protocolProfileBehavior": {
+								"disabledSystemHeaders": {
+									"accept": true
+								}
+							},
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "elpop",
+											"type": "text"
+										},
+										{
+											"key": "username",
+											"value": "elpop",
+											"type": "text"
+										},
+										{
+											"key": "photo",
+											"type": "file",
+											"src": "/C:/Users/SanDBaG/Desktop/projects-thumbnail/menu-landing-min.png"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{BASEURL}}/user/3",
+									"host": [
+										"{{BASEURL}}"
+									],
+									"path": [
+										"user",
+										"3"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASEURL}}/admin/user/4",
+									"host": [
+										"{{BASEURL}}"
+									],
+									"path": [
+										"admin",
+										"user",
+										"4"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"auth": {
+						"type": "bearer",
+						"bearer": [
+							{
+								"key": "token",
+								"value": "O3lgiYfzl5BiIUkuw2apJN1r3UrFgbj0vJeEHjMf",
+								"type": "string"
+							}
+						]
+					},
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						}
+					]
+				},
+				{
+					"name": "Supplier",
+					"item": [
+						{
+							"name": "Show",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\":\"user\",\r\n    \"username\":\"-er\",\r\n    \"photo\":\"img.png\",\r\n    \"password\":\"124578963\",\r\n    \"confirm_password\":\"124578963\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASEURL}}/admin/supplier/3",
+									"host": [
+										"{{BASEURL}}"
+									],
+									"path": [
+										"admin",
+										"supplier",
+										"3"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Index",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\":\"user\",\r\n    \"username\":\"-er\",\r\n    \"photo\":\"img.png\",\r\n    \"password\":\"124578963\",\r\n    \"confirm_password\":\"124578963\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASEURL}}/admin/supplier",
+									"host": [
+										"{{BASEURL}}"
+									],
+									"path": [
+										"admin",
+										"supplier"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create",
+							"protocolProfileBehavior": {
+								"disabledSystemHeaders": {}
+							},
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "company",
+											"value": "iconsss",
+											"type": "text"
+										},
+										{
+											"key": "phone",
+											"value": "01066135740",
+											"type": "text"
+										},
+										{
+											"key": "photo",
+											"type": "file",
+											"src": "/C:/Users/SanDBaG/Desktop/projects-thumbnail/kittton landing.png"
+										},
+										{
+											"key": "hahah",
+											"value": "lkamsdlkam",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "{{BASEURL}}/user/supplier",
+									"host": [
+										"{{BASEURL}}"
+									],
+									"path": [
+										"user",
+										"supplier"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "company",
+											"value": "not Icons",
+											"type": "text"
+										},
+										{
+											"key": "phone",
+											"value": "011321354635",
+											"type": "text"
+										},
+										{
+											"key": "photo",
+											"type": "file",
+											"src": "/C:/Users/SanDBaG/Desktop/projects-thumbnail/screencapture-kitton-academy-netlify-app-admin-classes-index-2022-08-17-23_49_38.png"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{BASEURL}}/user/supplier/3",
+									"host": [
+										"{{BASEURL}}"
+									],
+									"path": [
+										"user",
+										"supplier",
+										"3"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\":\"user\",\r\n    \"username\":\"adad\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASEURL}}/user/supplier/1",
+									"host": [
+										"{{BASEURL}}"
+									],
+									"path": [
+										"user",
+										"supplier",
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"auth": {
+						"type": "bearer",
+						"bearer": [
+							{
+								"key": "token",
+								"value": "1|lCLpZRssJfIyH6o8dZcSEvf28HiI6786xMhOyAvd",
+								"type": "string"
+							}
+						]
+					},
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						}
+					]
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "BASEURL",
+			"value": "127.0.0.1:8000/api",
+			"type": "string"
+		}
+	]
+}
